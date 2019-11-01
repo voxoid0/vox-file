@@ -80,3 +80,8 @@ int main()
 ```
 
 ![alt text](console-example.PNG "Example Output")
+
+Original model:
+![alt text](example-model.PNG "Example Model")
+
+Hey no worries, you have all of the data needed to do better than a lousy console renderer. 
