@@ -112,10 +112,11 @@ void VoxFile::ReadChunk(ifstream& file) {
     ReadXyziChunk(file, contents_size, children_size);
   else if (chunk_id == "RGBA")
     ReadRgbaChunk(file, contents_size, children_size);
-  else if (chunk_id == "MATT")
-    ;
+  //else if (chunk_id == "MATT")
 
+  // RIFF format enforces even byte boundaries between chunks.
   // if (contents_size & 1) ++contents_size;
+
   const uint32_t next_chunk_pos =
       contents_start + contents_size + children_size;
   file.seekg(next_chunk_pos);

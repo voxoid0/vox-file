@@ -40,7 +40,11 @@ class VoxSparseModel;
 class VoxException;
 struct Voxel;
 struct Color;
-struct Size;
+struct Vec3i;
+
+// 3D size. x, y, z is the width, height, depth...or width, depth, height...
+// it's just more straightforward to use the axis names.
+using Size = Vec3i;
 
 
 // Exception thrown when there is a problem reading/writing a .vox file
@@ -55,11 +59,10 @@ class VoxException : public std::exception {
   const std::string message_;
 };
 
-// 3D size. x, y, z is the width, height, depth...or width, depth, height...
-// it's just more straightforward to use the axis names.
-struct Size {
+struct Vec3i {
   uint32_t x, y, z;
 };
+
 
 // RGBA color, as four bytes ranging from 0 to 255.
 struct Color {
@@ -142,6 +145,7 @@ class VoxDenseModel {
 
   const Size& size() const noexcept { return size_; }
   Palette& palette() noexcept { return palette_; }
+  const Palette& palette() const noexcept { return palette_; }
   uint8_t voxel(int x, int y, int z) const {
     return voxels_.at(x + (y * size_.x) + (z * size_.x * size_.y));
   }
