@@ -52,7 +52,6 @@ int main()
     const Size& size = model.size();
     for (int sy = 0; sy < size.z + size.y - 1; ++sy) {
       for (int sx = 0; sx < size.x + size.y - 1; ++sx) {
-        //Vec3i ray{-size.x + 1, 0, size.z - 1 + size.y - 1};
         int ray_x = -static_cast<int>(size.y) + 1 + sx;
         int ray_y = 0;
         int ray_z = static_cast<int>(size.z) - 1 + static_cast<int>(size.y) - 1 - sy;
