@@ -45,7 +45,7 @@ int main()
   static const int kPixelWidth = 2;
 
   VoxFile voxFile(true);
-  voxFile.Load(R"(C:\code\games\resources\MagicaVoxel\cylinder-thing.vox)");
+  voxFile.Load("cylinder-thing.vox");
 
   for (const auto& model : voxFile.denseModels()) {
     cout << endl;
