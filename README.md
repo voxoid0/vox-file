@@ -21,7 +21,7 @@ The color palette is also available:
   cout << "RGBA of color 10 is: " << color.r << ',' << color.g << ',' << color.b << ',' << color.a << endl;
 ```
 
-And since everyone needs a console voxel ray tracer with skew-orthogonal 3D graphics, here's a full example:
+And since everyone needs a console voxel ray tracer with skew-isometric 3D graphics, here's a full example:
 
 ```
 #include "vox_file.h"
